@@ -1,3 +1,4 @@
+git fetch && git pull
 cmake .
 make
 ./takephoto
