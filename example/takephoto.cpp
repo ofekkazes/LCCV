@@ -11,7 +11,7 @@ int main()
     cam.options->photo_height=1520;
     cam.options->verbose=true;
     cam.options->gain = 2.0f;
-    cam.options->shutter = 0.02f;
+    cam.options->shutter = 0.1f;
     cam.capturePhoto(image);
     cv::rotate(image, image, cv::ROTATE_90_CLOCKWISE);
     cv::Mat denoised;
