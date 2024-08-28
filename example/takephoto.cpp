@@ -13,6 +13,6 @@ int main()
     cam.capturePhoto(image);
     cv::rotate(image, image, cv::ROTATE_90_CLOCKWISE);
     cv::Mat denoised;
-    cv::fastNlMeansDenoisingColored(image, denoised, 10, 10, 7, 21);
+    cv::fastNlMeansDenoisingColored(image, denoised, 5, 5, 7, 21);
     imwrite("test.jpg", denoised);
 }
