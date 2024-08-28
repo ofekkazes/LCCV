@@ -11,5 +11,6 @@ int main()
     cam.options->photo_height=1520;
     cam.options->verbose=true;
     cam.capturePhoto(image);
+    cv::rotate(image, image, cv::ROTATE_90_CLOCKWISE);
     imwrite("test.jpg", image);
 }
