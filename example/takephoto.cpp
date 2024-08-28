@@ -13,7 +13,7 @@ int main()
     cam.options->verbose=true;
     cam.options->gain = 2.0f;
     cam.options->shutter = 0.1f;
-    cam.options->setWhiteBalance(WB_DAYLIGHT);
+    cam.options->setWhiteBalance(WB_INDOOR);
     cam.capturePhoto(image);
     cv::rotate(image, image, cv::ROTATE_90_CLOCKWISE);
     cv::Mat denoised;
