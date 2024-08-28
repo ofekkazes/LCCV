@@ -10,15 +10,6 @@ int main()
     cam.options->photo_width=2028;
     cam.options->photo_height=1520;
     cam.options->verbose=true;
-    cv::namedWindow("Image",cv::WINDOW_NORMAL);
-    for(int i=0;i<100;i++){
-        std::cout<<i<<std::endl;
-        if(!cam.capturePhoto(image)){
-            std::cout<<"Camera error"<<std::endl;
-        }
-        cv::imshow("Image",image);
-        cv::waitKey(30);
-    }
-    cv::waitKey();
-    cv::destroyWindow("Image");
+    cam.capturePhoto(image);
+    imwrite("test.jpg", image);
 }
